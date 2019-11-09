@@ -7,8 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class ProgramApplicationTests {
 
     @Test
-    void contextLoads() {
-        jkhgg
+    void contextLoads()
     }
 
 }
