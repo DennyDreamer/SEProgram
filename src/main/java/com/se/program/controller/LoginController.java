@@ -17,13 +17,14 @@ public class LoginController {
     public String login(@RequestParam("username") String username,
                         @RequestParam("password") String password,
                         Map<String,Object> map, HttpSession session){
-        if(!StringUtils.isEmpty(username)&&(true)){//查询数据库中是否有该用户
+        if(StringUtils.isEmpty(username)|| !(true)){// bool find_user(username) 查询数据库中是否有该用户
 
             map.put("msg","该用户不存在");
-            return"login";
+            return "login";
         }
 
-        else if(!StringUtils.isEmpty((username))&& password.equals("000000"))
+        else if(StringUtils.isEmpty((username))|| !(password.equals("000000")))
+        //string get_passwpord(username) 从数据库中获取该用户密码
         {//查询数据库中用户密码
         map.put("msg","用户名密码错误");
         return "login";
@@ -31,8 +32,8 @@ public class LoginController {
 
         else{
             session.setAttribute("loginUser",username);
-            session.setAttribute("User_pri",username);//读取用户权限。
-            switch (username){//从数据库中读取用户权限
+        //    session.setAttribute("User_pri",user_pri());//读取用户权限,通过session传给前端调用
+            switch (username){//  switch(user_pri()) : 从数据库中读取用户权限
                 case "user":
                     return"redirect:/user.html";
                 case "checker":
