@@ -8,7 +8,6 @@ class ProgramApplicationTests {
 
     @Test
     void contextLoads() {
-        jkhgg
     }
 
 }
