@@ -7,7 +7,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     schema:
       - classpath:init.sql
-    initialization-mode: always
+    #initialization-mode: always
 mybatis:
-  mapper-locations: classpath:mybatis/*.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
   type-aliases-package: com.se.program.entities
