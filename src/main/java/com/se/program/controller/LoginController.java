@@ -1,53 +1,86 @@
 package com.se.program.controller;
 
 
+import com.se.program.LoginTest.LoginUsers;
+import com.se.program.LoginTest.Result;
+import com.se.program.entities.admin;
+import com.se.program.entities.user;
+import com.se.program.mapper.adminMapper;
+import com.se.program.mapper.userMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.Map;
 
 @Controller
 public class LoginController {
 
-    @PostMapping(value = "????")
-    public String login(@RequestParam("username") String username,
-                        @RequestParam("password") String password,
-                        Map<String,Object> map, HttpSession session){
-        if(StringUtils.isEmpty(username)|| !(true)){// bool find_user(username) 查询数据库中是否有该用户
+    @Autowired
+    userMapper UserMapper;
+    @Autowired
+    adminMapper AdminMapper;
 
-            map.put("msg","该用户不存在");
-            return "login";
+    @PostMapping(value = "api/login")
+    @ResponseBody
+    @CrossOrigin
+    public Result login(@RequestBody LoginUsers LoginUser, HttpServletRequest request) {
+        /**
+         *   用户登录
+         */
+        HttpSession session = request.getSession(true);
+        String number = (LoginUser.getUsername());
+        String password = LoginUser.getPassword();
+        int admin_id = Integer.parseInt(number);
+
+        int id = UserMapper.selectIdByUserNumber(number);
+
+        //   System.out.println(UserMapper.selectByPrimaryKey(1).getPassword());
+
+        user User = UserMapper.selectByPrimaryKey(id);
+        admin Admin = AdminMapper.selectByPrimaryKey(admin_id);
+        if ( Admin== null) {
+            if (User == null) {
+                return new Result(400);
+                //用户不存在
+            } else {
+                if(User.getUserPassword().equals(password)) {
+                    session.setAttribute("users",User);
+                    user ThisUser =  (user) session.getAttribute("users");
+                    System.out.println(ThisUser.toString());
+
+                    return new Result(201); //用户登录成功，返回201
+                }
+                else {
+                    return new Result(300); //用户名密码错误
+                }
+            }
         }
-
-        else if(StringUtils.isEmpty((username))|| !(password.equals("000000")))
-        //string get_passwpord(username) 从数据库中获取该用户密码
-        {//查询数据库中用户密码
-        map.put("msg","用户名密码错误");
-        return "login";
-        }
-
-        else{
-            session.setAttribute("loginUser",username);
-        //    session.setAttribute("User_pri",user_pri());//读取用户权限,通过session传给前端调用
-            switch (username){//  switch(user_pri()) : 从数据库中读取用户权限
-                case "user":
-                    return"redirect:/user.html";
-                case "checker":
-                    return "redirect:/checker.html";
-                case "receiver":
-                    return "redirect:/receiver.html";
-                case "checker_admin":
-                    return "redirect:/checker_admin.html";
-                case "admin":
-                    return "redirect:/admin.html";
-                default:
-                    return "redirect:/user.html";
+        else {
+            if(Admin.getAdminPassword().equals(password)) {
+                session.setAttribute("admins",Admin);
+                switch (Admin.getAdminPermission()) {
+                    //  管理员用户密码正确，查看权限
+                    case 1: //系统管理员
+                        return new Result(200);
+                    case 2: //审核负责人
+                        return new Result(202);
+                    case 3: //审核人
+                        return new Result(203);
+                    case 4: //收单员
+                        return new Result(204);
+                    default: //其他，返回错误
+                        return new Result(600);
+                }
             }
 
+            else {
+                return new Result(300); //管理员用户密码错误
+            }
         }
     }
 }

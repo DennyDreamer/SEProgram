@@ -1,7 +1,6 @@
 package com.se.program.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -18,6 +17,7 @@ public class OurConfig implements WebMvcConfigurer {
         registry.addViewController("/receiver.html").setViewName(("receiver"));
         registry.addViewController("/checker_admin.html").setViewName("check_admin");
         registry.addViewController("/admin.html").setViewName("admin");
+
 
     }
 
