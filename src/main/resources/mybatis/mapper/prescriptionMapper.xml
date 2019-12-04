@@ -48,6 +48,10 @@
     where form_id = #{formId,jdbcType=INTEGER}
   </select>
 
+  <select id="selectMaxCount" resultType="java.lang.Integer">
+    select count(*) as count from prescription
+  </select>
+
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--

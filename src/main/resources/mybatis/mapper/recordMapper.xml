@@ -51,6 +51,10 @@
     where form_id = #{formId,jdbcType=INTEGER}
   </select>
 
+  <select id="selectMaxCount" resultType="java.lang.Integer">
+    select count(*) as count from record
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
       WARNING - @mbg.generated

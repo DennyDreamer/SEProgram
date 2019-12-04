@@ -10,6 +10,8 @@
     <result column="bill_image" jdbcType="VARCHAR" property="billImage" />
     <result column="form_id" jdbcType="INTEGER" property="formId" />
   </resultMap>
+
+
   <resultMap id="BillImg" type="java.lang.String">
     <!--
       WARNING - @mbg.generated
@@ -46,6 +48,9 @@
     where form_id = #{formId,jdbcType=INTEGER}
   </select>
 
+  <select id="selectMaxCount" resultType="java.lang.Integer">
+    select count(*) as count from bill
+  </select>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
