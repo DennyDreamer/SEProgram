@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
-
+import com.se.program.LoginTest.zhuanzhenModel;
 @MapperScan(value = "com.se.program.mapper")
 @SpringBootTest
 class ProgramApplicationTests {
@@ -30,6 +30,7 @@ class ProgramApplicationTests {
 
     @Test
     void contextLoads() {
+        List<zhuanzhenModel> recordArr;
      //   System.out.println(UserMapper.selectPasswordByPrimaryKey(1));
         List<record> a = RecordMapper.selectByUserId(1);
 
