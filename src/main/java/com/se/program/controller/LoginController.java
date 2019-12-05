@@ -53,7 +53,7 @@ public class LoginController {
                     user ThisUser =  (user) session.getAttribute("users");
                     System.out.println(ThisUser.toString());
 
-                    return new Result(201); //用户登录成功，返回201
+                    return new Result(200); //用户登录成功，返回201
                 }
                 else {
                     return new Result(300); //用户名密码错误
@@ -66,11 +66,11 @@ public class LoginController {
                 switch (Admin.getAdminPermission()) {
                     //  管理员用户密码正确，查看权限
                     case 1: //系统管理员
-                        return new Result(200);
+                        return new Result(201);
                     case 2: //审核负责人
-                        return new Result(202);
-                    case 3: //审核人
                         return new Result(203);
+                    case 3: //审核人
+                        return new Result(202);
                     case 4: //收单员
                         return new Result(204);
                     default: //其他，返回错误

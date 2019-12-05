@@ -5,6 +5,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.Date;
 
 public class UploadInfo {
+
     String ChangeHospital ;
     Date ChangeDate;
     MultipartFile ChangeImg;
