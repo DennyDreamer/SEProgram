@@ -115,6 +115,12 @@
     from form
     where form_id = #{formId,jdbcType=INTEGER}
   </select>
+
+  <select id="selectMaxCount" resultType="java.lang.Integer">
+    select count(*) as count from form
+  </select>
+
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
       WARNING - @mbg.generated
@@ -286,8 +292,4 @@
       hospital_department = #{hospitalDepartment,jdbcType=VARCHAR}
     where form_id = #{formId,jdbcType=INTEGER}
   </update>
-
-  <select id="selectMaxCount" resultType="java.lang.Integer">
-    select count(*) as count from form
-  </select>
 </mapper>
