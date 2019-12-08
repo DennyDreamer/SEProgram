@@ -96,11 +96,4 @@ public interface recordMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(record record);
-
-    List<record> selectByUserId(Integer userId);
-
-    int selectUserIdByFormId(Integer formId);
-
-    int selectMaxCount();
-
 }

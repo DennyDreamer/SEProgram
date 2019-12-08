@@ -96,8 +96,4 @@ public interface formMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(form record);
-
-    int selectMaxCount();
-
-
 }

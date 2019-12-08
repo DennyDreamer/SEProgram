@@ -96,8 +96,4 @@ public interface changehospitalMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(changehospital record);
-
-    int selectMaxCount();
-
-    String selectChangeImgByFormId(Integer formId);
 }

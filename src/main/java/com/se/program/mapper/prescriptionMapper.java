@@ -96,8 +96,4 @@ public interface prescriptionMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(prescription record);
-
-    int selectMaxCount();
-
-    String selectPrescriptionImgByFormId(Integer formId);
 }

@@ -97,8 +97,4 @@ public interface registerMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(register record);
-
-    int selectMaxCount();
-
-    String selectRegisterImgByFormId(Integer formId);
 }

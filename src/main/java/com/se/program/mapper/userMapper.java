@@ -1,9 +1,8 @@
 package com.se.program.mapper;
 
 import com.se.program.entities.user;
-import org.springframework.stereotype.Repository;
-
 import com.se.program.entities.userExample;
+import org.springframework.stereotype.Repository;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
@@ -87,7 +86,6 @@ public interface userMapper {
      *
      * @mbg.generated
      */
-    int updateByPrimaryKey(user record);
     int updateByPrimaryKeySelective(user record);
 
     /**
@@ -96,7 +94,5 @@ public interface userMapper {
      *
      * @mbg.generated
      */
-    int selectIdByUserNumber(String userNumber);
-
-    List<user> selectByUserState(int State);
+    int updateByPrimaryKey(user record);
 }
