@@ -20,7 +20,7 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin` (
-  `admin_id` int(30) NOT NULL,
+  `admin_id` int(30) NOT NULL auto_increment,
   `admin_name` varchar(30) NOT NULL,
   `admin_permission` int(30) NOT NULL,
   `admin_password` varchar(30) NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE `admin` (
 -- ----------------------------
 DROP TABLE IF EXISTS `bill`;
 CREATE TABLE `bill` (
-  `bill_id` int(30) NOT NULL,
+  `bill_id` int(30) NOT NULL auto_increment,
   `bill_hospital` varchar(30) NOT NULL,
   `bill_cost` int(30) NOT NULL,
   `bill_image` varchar(30) NOT NULL,
@@ -54,10 +54,10 @@ CREATE TABLE `bill` (
 -- ----------------------------
 DROP TABLE IF EXISTS `changehospital`;
 CREATE TABLE `changehospital` (
-  `changehospital_id` int(30) NOT NULL,
-  `changehospital_image` varchar(30) NOT NULL,
-  `changehospital_in` varchar(30) NOT NULL,
-  `changehospital_out` varchar(30) NOT NULL,
+  `changehospital_id` int(30) NOT NULL auto_increment,
+  `changehospital_image` varchar(30) ,
+  `changehospital_in` varchar(30) ,
+  `changehospital_out` varchar(30) ,
   `form_id` int(30) NOT NULL,
   PRIMARY KEY (`changehospital_id`),
   KEY `form_id` (`form_id`)
@@ -72,7 +72,7 @@ CREATE TABLE `changehospital` (
 -- ----------------------------
 DROP TABLE IF EXISTS `department`;
 CREATE TABLE `department` (
-  `department_id` int(30) NOT NULL DEFAULT '0',
+  `department_id` int(30) NOT NULL auto_increment,
   `department_oldname` varchar(30) NOT NULL,
   `department_name` varchar(30) DEFAULT NULL,
   `department_state` varchar(30) DEFAULT NULL,
@@ -88,12 +88,14 @@ CREATE TABLE `department` (
 -- ----------------------------
 DROP TABLE IF EXISTS `form`;
 CREATE TABLE `form` (
-  `form_id` int(30) NOT NULL DEFAULT '0',
-  `form_time` datetime NOT NULL,
-  `form_kind` int(30) NOT NULL,
-  `hospital` varchar(30) NOT NULL,
-  `form_text` varchar(100) DEFAULT NULL,
-  `hospital_department` varchar(30) NOT NULL,
+  `form_id` int(30) NOT NULL AUTO_INCREMENT,
+  `form_time` datetime ,
+  `form_kind` int(30) ,
+  `hospital` varchar(30) ,
+  `gaizhang_img` varchar(30) ,
+  `teshu_img` varchar(30) ,
+  `form_text` varchar(100) ,
+  `hospital_department` varchar(30),
   PRIMARY KEY (`form_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -106,7 +108,7 @@ CREATE TABLE `form` (
 -- ----------------------------
 DROP TABLE IF EXISTS `operation`;
 CREATE TABLE `operation` (
-  `operation_id` int(30) NOT NULL,
+  `operation_id` int(30) NOT NULL auto_increment,
   `form_id` int(30) NOT NULL,
   `operation_time` datetime NOT NULL,
   `amount` varchar(30) NOT NULL,
@@ -127,7 +129,7 @@ CREATE TABLE `operation` (
 -- ----------------------------
 DROP TABLE IF EXISTS `prescription`;
 CREATE TABLE `prescription` (
-  `prescription_id` int(30) NOT NULL,
+  `prescription_id` int(30) NOT NULL auto_increment,
   `prescription_hospital` varchar(30) NOT NULL,
   `prescription_department` varchar(30) NOT NULL,
   `prescription_cost` int(30) NOT NULL,
@@ -146,9 +148,9 @@ CREATE TABLE `prescription` (
 -- ----------------------------
 DROP TABLE IF EXISTS `record`;
 CREATE TABLE `record` (
-  `record_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `record_time` datetime NOT NULL,
+  `record_id` int(11) NOT NULL auto_increment,
+  `user_id` int(11) not null ,
+  `record_time` datetime not null ,
   `form_id` int(11) NOT NULL,
   `record_state` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
@@ -165,7 +167,7 @@ CREATE TABLE `record` (
 -- ----------------------------
 DROP TABLE IF EXISTS `register`;
 CREATE TABLE `register` (
-  `register_id` int(30) NOT NULL,
+  `register_id` int(30) NOT NULL auto_increment,
   `register_hospital` varchar(30) NOT NULL,
   `register_department` varchar(30) NOT NULL,
   `register_cost` int(30) NOT NULL,
@@ -184,7 +186,7 @@ CREATE TABLE `register` (
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `user_id` int(30) NOT NULL DEFAULT '0',
+  `user_id` int(30) NOT NULL auto_increment,
   `user_name` varchar(30) DEFAULT NULL,
   `user_sex` varchar(30) DEFAULT NULL,
   `user_idcard` varchar(30) DEFAULT NULL,
