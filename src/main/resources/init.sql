@@ -91,11 +91,9 @@ CREATE TABLE `form` (
   `form_id` int(30) NOT NULL AUTO_INCREMENT,
   `form_time` datetime ,
   `form_kind` int(30) ,
-  `hospital` varchar(30) ,
   `gaizhang_img` varchar(30) ,
   `teshu_img` varchar(30) ,
   `form_text` varchar(100) ,
-  `hospital_department` varchar(30),
   PRIMARY KEY (`form_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -203,4 +201,4 @@ CREATE TABLE `user` (
 
 -- ----------------------------
 -- Records of user
--- ----------------------------
+CREATE ALGORITHM = UNDEFINED DEFINER = `skip-grants user`@`skip-grants host` SQL SECURITY DEFINER VIEW `jdbc`.`Untitled` AS select `user`.`user_name` AS `user_name`,`user`.`user_number` AS `user_number`,`user`.`user_type` AS `user_type`,`record`.`record_id` AS `record_id`,`record`.`record_time` AS `record_time`,`record`.`record_state` AS `record_state` from (`user` join `record`) where (`user`.`user_id` = `record`.`user_id`);
