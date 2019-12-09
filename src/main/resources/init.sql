@@ -37,9 +37,9 @@ CREATE TABLE `admin` (
 DROP TABLE IF EXISTS `bill`;
 CREATE TABLE `bill` (
   `bill_id` int(30) NOT NULL auto_increment,
-  `bill_hospital` varchar(30) NOT NULL,
   `bill_cost` int(30) NOT NULL,
-  `bill_image` varchar(30) NOT NULL,
+  `bill_prescription_image` varchar(100) NOT NULL,
+  `bill_image` varchar(100) NOT NULL,
   `form_id` int(5) NOT NULL,
   PRIMARY KEY (`bill_id`),
   KEY `form_id` (`form_id`)
@@ -93,7 +93,7 @@ CREATE TABLE `form` (
   `form_kind` int(30) ,
   `gaizhang_img` varchar(30) ,
   `teshu_img` varchar(30) ,
-  `form_text` varchar(100) ,
+  `form_text` varchar(1000) ,
   PRIMARY KEY (`form_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -108,6 +108,8 @@ DROP TABLE IF EXISTS `operation`;
 CREATE TABLE `operation` (
   `operation_id` int(30) NOT NULL auto_increment,
   `form_id` int(30) NOT NULL,
+  `register_zifei` int(30) NOT NULL,
+  `bill_zifei` int(30) NOT NULL,
   `operation_time` datetime NOT NULL,
   `amount` varchar(30) NOT NULL,
   `admin_id` int(30) NOT NULL,
@@ -125,17 +127,17 @@ CREATE TABLE `operation` (
 -- ----------------------------
 -- Table structure for `prescription`
 -- ----------------------------
-DROP TABLE IF EXISTS `prescription`;
-CREATE TABLE `prescription` (
-  `prescription_id` int(30) NOT NULL auto_increment,
-  `prescription_hospital` varchar(30) NOT NULL,
-  `prescription_department` varchar(30) NOT NULL,
-  `prescription_cost` int(30) NOT NULL,
-  `prescription_image` varchar(30) NOT NULL,
-  `form_id` int(30) NOT NULL,
-  PRIMARY KEY (`prescription_id`),
-  KEY `form` (`form_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+# DROP TABLE IF EXISTS `prescription`;
+# CREATE TABLE `prescription` (
+#   `prescription_id` int(30) NOT NULL auto_increment,
+#   `prescription_hospital` varchar(30) NOT NULL,
+#   `prescription_department` varchar(30) NOT NULL,
+#   `prescription_cost` int(30) NOT NULL,
+#   `prescription_image` varchar(30) NOT NULL,
+#   `form_id` int(30) NOT NULL,
+#   PRIMARY KEY (`prescription_id`),
+#   KEY `form` (`form_id`)
+# ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of prescription
@@ -166,10 +168,11 @@ CREATE TABLE `record` (
 DROP TABLE IF EXISTS `register`;
 CREATE TABLE `register` (
   `register_id` int(30) NOT NULL auto_increment,
-  `register_hospital` varchar(30) NOT NULL,
+  `register_hospital` varchar(30) not null ,
   `register_department` varchar(30) NOT NULL,
   `register_cost` int(30) NOT NULL,
   `register_image` varchar(30) NOT NULL,
+  `register_explaination` varchar(30) NOT NULL,
   `form_id` int(30) NOT NULL,
   PRIMARY KEY (`register_id`),
   KEY `form_id` (`form_id`)
@@ -201,4 +204,6 @@ CREATE TABLE `user` (
 
 -- ----------------------------
 -- Records of user
-CREATE ALGORITHM = UNDEFINED DEFINER = `skip-grants user`@`skip-grants host` SQL SECURITY DEFINER VIEW `jdbc`.`Untitled` AS select `user`.`user_name` AS `user_name`,`user`.`user_number` AS `user_number`,`user`.`user_type` AS `user_type`,`record`.`record_id` AS `record_id`,`record`.`record_time` AS `record_time`,`record`.`record_state` AS `record_state` from (`user` join `record`) where (`user`.`user_id` = `record`.`user_id`);
+
+DROP VIEW IF EXISTS `sendrecord`;
+CREATE ALGORITHM = UNDEFINED DEFINER = `skip-grants user`@`skip-grants host` SQL SECURITY DEFINER VIEW `sendrecord` AS select `record`.`record_id` AS `record_id`,`record`.`record_time` AS `record_time`,`record`.`record_state` AS `record_state`,`user`.`user_name` AS `user_name`,`user`.`user_number` AS `user_number`,`user`.`user_type` AS `user_type`,`operation`.`admin_id` AS `admin_id` from ((`record` join `user`) join `operation`) where ((`record`.`user_id` = `user`.`user_id`) and (`record`.`form_id` = `operation`.`form_id`));
