@@ -1,11 +1,8 @@
 package com.se.program.mapper;
 
 import com.se.program.entities.form;
-import com.se.program.entities.record;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.List;
 
 @Repository
 public interface formMapper {
@@ -58,7 +55,6 @@ public interface formMapper {
     int updateByPrimaryKey(form record);
 
     int selectMaxCount();
-
 
 
 }

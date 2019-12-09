@@ -4,8 +4,6 @@ import com.se.program.entities.changehospital;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.List;
-
 @Repository
 public interface changehospitalMapper {
     /**
@@ -59,6 +57,4 @@ public interface changehospitalMapper {
     int selectMaxCount();
 
     String selectChangeImgByFormId(Integer formId);
-
-    List<Integer> selectChangeIdByFormId(Integer FormId);
 }

@@ -4,8 +4,6 @@ import com.se.program.entities.prescription;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.List;
-
 @Repository
 public interface prescriptionMapper {
     /**
@@ -59,6 +57,4 @@ public interface prescriptionMapper {
     int selectMaxCount();
 
     String selectPrescriptionImgByFormId(Integer formId);
-
-    List<Integer> selectPreIdByFormId(Integer FormId);
 }

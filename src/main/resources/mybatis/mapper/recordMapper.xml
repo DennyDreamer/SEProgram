@@ -16,11 +16,6 @@
   <resultMap id="UserId" type="java.lang.Integer">
     <result column="user_id" jdbcType="INTEGER" property="userId" />
   </resultMap>
-
-  <resultMap id="FormId" type="java.lang.Integer">
-    <result column="form_id" jdbcType="INTEGER" property="formId" />
-  </resultMap>
-
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
@@ -28,7 +23,6 @@
     -->
     record_id, user_id, record_time, form_id, record_state
   </sql>
-
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     <!--
       WARNING - @mbg.generated
@@ -55,13 +49,6 @@
     select user_id
     from record
     where form_id = #{formId,jdbcType=INTEGER}
-  </select>
-
-
-  <select id="selectFormIdByRecordId" parameterType="java.lang.Integer" resultMap="FormId">
-    select form_id
-    from record
-    where record_id = #{recordId,jdbcType=INTEGER}
   </select>
 
   <select id="selectMaxCount" resultType="java.lang.Integer">
