@@ -31,22 +31,47 @@ class ProgramApplicationTests {
     @Test
     void contextLoads() {
         List<zhuanzhenModel> recordArr;
-     //   System.out.println(UserMapper.selectPasswordByPrimaryKey(1));
-        List<record> a = RecordMapper.selectByUserId(1);
 
-        System.out.println(BillMapper.selectMaxCount());
-        System.out.println(RecordMapper.selectMaxCount());
-        System.out.println(FormMapper.selectMaxCount());
-        System.out.println(RegisterMapper.selectMaxCount());
-        System.out.println(PrescriptionMapper.selectMaxCount());
-       System.out.println(ChangehospitalMapper.selectMaxCount());
-        for(int i =0;i<a.size();i++) {
-
-        System.out.println(a.get(i).getRecordId());
-
+        List<Integer> TheseFormId = RecordMapper.selectFormIdByRecordId(3);
+        for(int j =0;j<TheseFormId.size();j++){
+            System.out.println(TheseFormId.get(j).intValue());
         }
+
+        List<Integer> TheseBillid = BillMapper.selectBillIdByFormId(3);
+
+        for(int i=0;i<TheseBillid.size();i++){
+            System.out.println(TheseBillid.get(i).intValue());
+        }
+
+        List<Integer> TheseChangeId= ChangehospitalMapper.selectChangeIdByFormId(3);
+        for(int i=0;i<TheseChangeId.size();i++){
+            System.out.println(TheseChangeId.get(i).intValue());
+        }
+
+        List<Integer> ThesePreId= PrescriptionMapper.selectPreIdByFormId(3);
+        for(int i=0;i<ThesePreId.size();i++){
+            System.out.println(ThesePreId.get(i).intValue());
+        }
+
+        List<Integer> TheseRegId= RegisterMapper.selectRegIdByFormId(3);
+        for(int i=0;i<TheseRegId.size();i++){
+            System.out.println(TheseRegId.get(i).intValue());
+        }
+     //   System.out.println(UserMapper.selectPasswordByPrimaryKey(1));
+//        List<record> a = RecordMapper.selectByUserId(1);
+//
+//        System.out.println(BillMapper.selectMaxCount());
+//        System.out.println(RecordMapper.selectMaxCount());
+//        System.out.println(FormMapper.selectMaxCount());
+//        System.out.println(RegisterMapper.selectMaxCount());
+//        System.out.println(PrescriptionMapper.selectMaxCount());
+//       System.out.println(ChangehospitalMapper.selectMaxCount());
+//        for(int i =0;i<a.size();i++) {
+//
+//        System.out.println(a.get(i).getRecordId());
+
+//        }
       //  System.out.println(RecordMapper.selectByUserId(1));
       //  System.out.println(UserMapper.selectIdByUserNumber("456888"));
     }
-
 }

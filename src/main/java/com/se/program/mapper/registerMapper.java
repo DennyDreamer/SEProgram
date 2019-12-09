@@ -4,6 +4,8 @@ import com.se.program.entities.register;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 @ResponseBody
 @Repository
 public interface registerMapper {
@@ -58,4 +60,7 @@ public interface registerMapper {
     int selectMaxCount();
 
     String selectRegisterImgByFormId(Integer formId);
+
+    List<Integer> selectRegIdByFormId(Integer FormId);
+
 }

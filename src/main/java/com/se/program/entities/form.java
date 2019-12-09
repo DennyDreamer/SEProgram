@@ -200,4 +200,8 @@ public class form {
     public void setHospitalDepartment(String hospitalDepartment) {
         this.hospitalDepartment = hospitalDepartment == null ? null : hospitalDepartment.trim();
     }
+
+    public form() {
+    }
+
 }

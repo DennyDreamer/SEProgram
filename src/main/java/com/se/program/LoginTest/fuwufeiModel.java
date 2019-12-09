@@ -1,18 +1,24 @@
 package com.se.program.LoginTest;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
 import java.util.List;
-
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class fuwufeiModel {
-    String office;
-    int yishiPay;
-    Date yishiDate;
-    MultipartFile yishiImg;
-    List<yaofeiModel> yaofeiArr;
 
+    private String office;
+    private List<yaofeiModel> yaofeiArr;
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS Z", timezone = "GMT+8")
+    private String yishiDate;
 
+    private String yishiImg;
+    private int yishiPay;
+
+    public fuwufeiModel() {
+    }
 
     public void setOffice(String office) {
         this.office = office;
@@ -22,11 +28,11 @@ public class fuwufeiModel {
         this.yishiPay = yishiPay;
     }
 
-    public void setYishiDate(Date yishiDate) {
+    public void setYishiDate(String yishiDate) {
         this.yishiDate = yishiDate;
     }
 
-    public void setYishiImg(MultipartFile yishiImg) {
+    public void setYishiImg(String yishiImg) {
         this.yishiImg = yishiImg;
     }
 
@@ -43,11 +49,11 @@ public class fuwufeiModel {
         return yishiPay;
     }
 
-    public Date getYishiDate() {
+    public String getYishiDate() {
         return yishiDate;
     }
 
-    public MultipartFile getYishiImg() {
+    public String getYishiImg() {
         return yishiImg;
     }
 
@@ -55,7 +61,7 @@ public class fuwufeiModel {
         return yaofeiArr;
     }
 
-    public fuwufeiModel(String office, int yishiPay, Date yishiDate, MultipartFile yishiImg, List<yaofeiModel> yaofeiArr) {
+    public fuwufeiModel(String office, int yishiPay, String yishiDate,String yishiImg,List<yaofeiModel> yaofeiArr) {
         this.office = office;
         this.yishiPay = yishiPay;
         this.yishiDate = yishiDate;

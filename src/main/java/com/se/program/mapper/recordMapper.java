@@ -62,4 +62,5 @@ public interface recordMapper {
 
     int selectMaxCount();
 
+    List<Integer> selectFormIdByRecordId(Integer RecordId);
 }

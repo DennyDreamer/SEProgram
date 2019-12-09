@@ -53,6 +53,7 @@ public class LoginController {
                     user ThisUser =  (user) session.getAttribute("users");
                     System.out.println(ThisUser.toString());
 
+              //      System.out.println(ThisUser.getUserId());
                     return new Result(200); //用户登录成功，返回201
                 }
                 else {

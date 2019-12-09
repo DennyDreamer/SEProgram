@@ -4,6 +4,8 @@ import com.se.program.entities.bill;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 @Repository
 public interface billMapper {
     /**
@@ -71,4 +73,8 @@ public interface billMapper {
     String selectBillImgByFormId(Integer formId);
 
     int selectBillIdByPrimaryKey();
+
+    List<Integer> selectBillIdByFormId(Integer FormId);
+
+
 }

@@ -1,29 +1,35 @@
 package com.se.program.LoginTest;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
-
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class yaofeiModel {
-    int yaofeiPay;
-    Date yaofeiDate;
+    private String chufangImg;
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS Z", timezone = "GMT+8")
+    private String yaofeiDate;
 
-    MultipartFile yaofeiImg;
-    MultipartFile chufangImg;
 
+
+    private String yaofeiImg;
+    private int yaofeiPay;
+    public yaofeiModel() {
+    }
     public void setYaofeiPay(int yaofeiPay) {
         this.yaofeiPay = yaofeiPay;
     }
 
-    public void setYaofeiDate(Date yaofeiDate) {
+    public void setYaofeiDate(String yaofeiDate) {
         this.yaofeiDate = yaofeiDate;
     }
 
-    public void setYaofeiImg(MultipartFile yaofeiImg) {
+    public void setYaofeiImg(String yaofeiImg) {
         this.yaofeiImg = yaofeiImg;
     }
 
-    public void setChufangImg(MultipartFile chufangImg) {
+    public void setChufangImg(String chufangImg) {
         this.chufangImg = chufangImg;
     }
 
@@ -31,18 +37,18 @@ public class yaofeiModel {
         return yaofeiPay;
     }
 
-    public Date getYaofeiDate() {
+    public String getYaofeiDate() {
         return yaofeiDate;
     }
 
-    public MultipartFile getYaofeiImg() {
+    public String getYaofeiImg() {
         return yaofeiImg;
     }
 
-    public MultipartFile getChufangImg() {
+    public String getChufangImg() {
         return chufangImg;
     }
-    public yaofeiModel(int yaofeiPay, Date yaofeiDate, MultipartFile yaofeiImg, MultipartFile chufangImg) {
+    public yaofeiModel(int yaofeiPay, String yaofeiDate,String yaofeiImg,String chufangImg) {
         this.yaofeiPay = yaofeiPay;
         this.yaofeiDate = yaofeiDate;
         this.yaofeiImg = yaofeiImg;
