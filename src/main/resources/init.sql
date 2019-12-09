@@ -40,7 +40,8 @@ CREATE TABLE `bill` (
   `bill_cost` int(30) NOT NULL,
   `bill_prescription_image` varchar(100) NOT NULL,
   `bill_image` varchar(100) NOT NULL,
-  `form_id` int(5) NOT NULL,
+  `form_id` int(30) NOT NULL,
+  `register_id` int(30) NOT NULL,
   PRIMARY KEY (`bill_id`),
   KEY `form_id` (`form_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -174,6 +175,7 @@ CREATE TABLE `register` (
   `register_image` varchar(30) NOT NULL,
   `register_explaination` varchar(30) NOT NULL,
   `form_id` int(30) NOT NULL,
+  `changehospital_id` int(30) NOT NULL,
   PRIMARY KEY (`register_id`),
   KEY `form_id` (`form_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
