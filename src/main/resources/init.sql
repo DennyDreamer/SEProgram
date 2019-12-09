@@ -43,7 +43,8 @@ CREATE TABLE `bill` (
   `form_id` int(30) NOT NULL,
   `register_id` int(30) NOT NULL,
   PRIMARY KEY (`bill_id`),
-  KEY `form_id` (`form_id`)
+  KEY `form_id` (`form_id`),
+  KEY `register_id` (`register_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -177,7 +178,8 @@ CREATE TABLE `register` (
   `form_id` int(30) NOT NULL,
   `changehospital_id` int(30) NOT NULL,
   PRIMARY KEY (`register_id`),
-  KEY `form_id` (`form_id`)
+  KEY `form_id` (`form_id`),
+  KEY `changehospital_id` (`changehospital_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
