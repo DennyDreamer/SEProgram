@@ -5,7 +5,6 @@ import com.se.program.LoginTest.LoginUsers;
 import com.se.program.LoginTest.Result;
 import com.se.program.entities.admin;
 import com.se.program.entities.user;
-import com.se.program.entities.userExample;
 import com.se.program.mapper.adminMapper;
 import com.se.program.mapper.userMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.List;
 
 @Controller
 public class LoginController {
