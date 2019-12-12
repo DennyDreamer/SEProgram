@@ -445,6 +445,126 @@ public class operationExample {
             return (Criteria) this;
         }
 
+        public Criteria andRegisterPercentageIsNull() {
+            addCriterion("register_percentage is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterPercentageIsNotNull() {
+            addCriterion("register_percentage is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterPercentageEqualTo(Float value) {
+            addCriterion("register_percentage =", value, "registerPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterPercentageNotEqualTo(Float value) {
+            addCriterion("register_percentage <>", value, "registerPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterPercentageGreaterThan(Float value) {
+            addCriterion("register_percentage >", value, "registerPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterPercentageGreaterThanOrEqualTo(Float value) {
+            addCriterion("register_percentage >=", value, "registerPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterPercentageLessThan(Float value) {
+            addCriterion("register_percentage <", value, "registerPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterPercentageLessThanOrEqualTo(Float value) {
+            addCriterion("register_percentage <=", value, "registerPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterPercentageIn(List<Float> values) {
+            addCriterion("register_percentage in", values, "registerPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterPercentageNotIn(List<Float> values) {
+            addCriterion("register_percentage not in", values, "registerPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterPercentageBetween(Float value1, Float value2) {
+            addCriterion("register_percentage between", value1, value2, "registerPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterPercentageNotBetween(Float value1, Float value2) {
+            addCriterion("register_percentage not between", value1, value2, "registerPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMedicalPercentageIsNull() {
+            addCriterion("medical_percentage is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMedicalPercentageIsNotNull() {
+            addCriterion("medical_percentage is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMedicalPercentageEqualTo(Float value) {
+            addCriterion("medical_percentage =", value, "medicalPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMedicalPercentageNotEqualTo(Float value) {
+            addCriterion("medical_percentage <>", value, "medicalPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMedicalPercentageGreaterThan(Float value) {
+            addCriterion("medical_percentage >", value, "medicalPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMedicalPercentageGreaterThanOrEqualTo(Float value) {
+            addCriterion("medical_percentage >=", value, "medicalPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMedicalPercentageLessThan(Float value) {
+            addCriterion("medical_percentage <", value, "medicalPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMedicalPercentageLessThanOrEqualTo(Float value) {
+            addCriterion("medical_percentage <=", value, "medicalPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMedicalPercentageIn(List<Float> values) {
+            addCriterion("medical_percentage in", values, "medicalPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMedicalPercentageNotIn(List<Float> values) {
+            addCriterion("medical_percentage not in", values, "medicalPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMedicalPercentageBetween(Float value1, Float value2) {
+            addCriterion("medical_percentage between", value1, value2, "medicalPercentage");
+            return (Criteria) this;
+        }
+
+        public Criteria andMedicalPercentageNotBetween(Float value1, Float value2) {
+            addCriterion("medical_percentage not between", value1, value2, "medicalPercentage");
+            return (Criteria) this;
+        }
+
         public Criteria andAdminIdIsNull() {
             addCriterion("admin_id is null");
             return (Criteria) this;

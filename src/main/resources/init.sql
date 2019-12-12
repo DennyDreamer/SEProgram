@@ -293,7 +293,7 @@ INSERT INTO `user` VALUES (6, '李平原', '1', '12432', '汉', '2134322', '1232
 INSERT INTO `user` VALUES (7, '刘诗宇', '1', '12432', '汉', '2134322', '1232314', '23424', 1, 1, 1);
 INSERT INTO `user` VALUES (8, '安鹏飞', '1', '12432', '汉', '2134322', '1232314', '23424', 2, 1, 1);
 INSERT INTO `user` VALUES (9, '刘一凡', '1', '12432', '汉', '2134322', '1232314', '23424', 3, 1, 1);
-INSERT INTO `user` VALUES (10, '黄楚思', '1', '12432', '汉', '2134322', '1232314', '23424', 4, 1, 1);
+INSERT INTO `user` VALUES (10, '黄楚思', '1', '12432', '汉', '2134322', '1232314', '23424', 5, 1, 1);
 INSERT INTO `user` VALUES (11, '孙雪琪', '1', '12432', '汉', '2134322', '1232314', '23424', 2, 1, 1);
 INSERT INTO `user` VALUES (12, '詹紫忆', '1', '12432', '汉', '2134322', '1232314', '23424', 3, 1, 1);
 INSERT INTO `user` VALUES (13, '王珂林', '1', '12432', '汉', '2134322', '1232314', '23424', 4, 1, 1);
@@ -303,8 +303,9 @@ INSERT INTO `user` VALUES (14, '郭威', '1', '12432', '汉', '2134322', '123231
 -- View structure for sendrecord
 -- ----------------------------
 DROP VIEW IF EXISTS `sendrecord`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `skip-grants user`@`skip-grants host` SQL SECURITY DEFINER VIEW `sendrecord` AS select `record`.`record_id` AS `record_id`,`user`.`user_name` AS `user_name`,`user`.`user_number` AS `user_number`,`user`.`user_id` AS `user_id`,`record`.`record_time` AS `record_time`,`user`.`user_type` AS `user_type`,`record`.`record_state` AS `record_state` from (`user` join `record`);
+CREATE ALGORITHM = UNDEFINED DEFINER = `skip-grants user`@`skip-grants host` SQL SECURITY DEFINER VIEW `sendrecord` AS select `record`.`record_id` AS `record_id`,`user`.`user_name` AS `user_name`,`user`.`user_number` AS `user_number`,`user`.`user_id` AS `user_id`,`record`.`record_time` AS `record_time`,`user`.`user_type` AS `user_type`,`record`.`record_state` AS `record_state` from (`user` join `record`) where (`user`.`user_id` = `record`.`user_id`);
 
 SET FOREIGN_KEY_CHECKS = 1;
+
 
 

@@ -375,73 +375,143 @@ public class formExample {
             return (Criteria) this;
         }
 
-        public Criteria andHospitalIsNull() {
-            addCriterion("hospital is null");
+        public Criteria andGaizhangImgIsNull() {
+            addCriterion("gaizhang_img is null");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalIsNotNull() {
-            addCriterion("hospital is not null");
+        public Criteria andGaizhangImgIsNotNull() {
+            addCriterion("gaizhang_img is not null");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalEqualTo(String value) {
-            addCriterion("hospital =", value, "hospital");
+        public Criteria andGaizhangImgEqualTo(String value) {
+            addCriterion("gaizhang_img =", value, "gaizhangImg");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNotEqualTo(String value) {
-            addCriterion("hospital <>", value, "hospital");
+        public Criteria andGaizhangImgNotEqualTo(String value) {
+            addCriterion("gaizhang_img <>", value, "gaizhangImg");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalGreaterThan(String value) {
-            addCriterion("hospital >", value, "hospital");
+        public Criteria andGaizhangImgGreaterThan(String value) {
+            addCriterion("gaizhang_img >", value, "gaizhangImg");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalGreaterThanOrEqualTo(String value) {
-            addCriterion("hospital >=", value, "hospital");
+        public Criteria andGaizhangImgGreaterThanOrEqualTo(String value) {
+            addCriterion("gaizhang_img >=", value, "gaizhangImg");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalLessThan(String value) {
-            addCriterion("hospital <", value, "hospital");
+        public Criteria andGaizhangImgLessThan(String value) {
+            addCriterion("gaizhang_img <", value, "gaizhangImg");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalLessThanOrEqualTo(String value) {
-            addCriterion("hospital <=", value, "hospital");
+        public Criteria andGaizhangImgLessThanOrEqualTo(String value) {
+            addCriterion("gaizhang_img <=", value, "gaizhangImg");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalLike(String value) {
-            addCriterion("hospital like", value, "hospital");
+        public Criteria andGaizhangImgLike(String value) {
+            addCriterion("gaizhang_img like", value, "gaizhangImg");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNotLike(String value) {
-            addCriterion("hospital not like", value, "hospital");
+        public Criteria andGaizhangImgNotLike(String value) {
+            addCriterion("gaizhang_img not like", value, "gaizhangImg");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalIn(List<String> values) {
-            addCriterion("hospital in", values, "hospital");
+        public Criteria andGaizhangImgIn(List<String> values) {
+            addCriterion("gaizhang_img in", values, "gaizhangImg");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNotIn(List<String> values) {
-            addCriterion("hospital not in", values, "hospital");
+        public Criteria andGaizhangImgNotIn(List<String> values) {
+            addCriterion("gaizhang_img not in", values, "gaizhangImg");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalBetween(String value1, String value2) {
-            addCriterion("hospital between", value1, value2, "hospital");
+        public Criteria andGaizhangImgBetween(String value1, String value2) {
+            addCriterion("gaizhang_img between", value1, value2, "gaizhangImg");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNotBetween(String value1, String value2) {
-            addCriterion("hospital not between", value1, value2, "hospital");
+        public Criteria andGaizhangImgNotBetween(String value1, String value2) {
+            addCriterion("gaizhang_img not between", value1, value2, "gaizhangImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andTeshuImgIsNull() {
+            addCriterion("teshu_img is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTeshuImgIsNotNull() {
+            addCriterion("teshu_img is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTeshuImgEqualTo(String value) {
+            addCriterion("teshu_img =", value, "teshuImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andTeshuImgNotEqualTo(String value) {
+            addCriterion("teshu_img <>", value, "teshuImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andTeshuImgGreaterThan(String value) {
+            addCriterion("teshu_img >", value, "teshuImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andTeshuImgGreaterThanOrEqualTo(String value) {
+            addCriterion("teshu_img >=", value, "teshuImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andTeshuImgLessThan(String value) {
+            addCriterion("teshu_img <", value, "teshuImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andTeshuImgLessThanOrEqualTo(String value) {
+            addCriterion("teshu_img <=", value, "teshuImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andTeshuImgLike(String value) {
+            addCriterion("teshu_img like", value, "teshuImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andTeshuImgNotLike(String value) {
+            addCriterion("teshu_img not like", value, "teshuImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andTeshuImgIn(List<String> values) {
+            addCriterion("teshu_img in", values, "teshuImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andTeshuImgNotIn(List<String> values) {
+            addCriterion("teshu_img not in", values, "teshuImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andTeshuImgBetween(String value1, String value2) {
+            addCriterion("teshu_img between", value1, value2, "teshuImg");
+            return (Criteria) this;
+        }
+
+        public Criteria andTeshuImgNotBetween(String value1, String value2) {
+            addCriterion("teshu_img not between", value1, value2, "teshuImg");
             return (Criteria) this;
         }
 
@@ -512,76 +582,6 @@ public class formExample {
 
         public Criteria andFormTextNotBetween(String value1, String value2) {
             addCriterion("form_text not between", value1, value2, "formText");
-            return (Criteria) this;
-        }
-
-        public Criteria andHospitalDepartmentIsNull() {
-            addCriterion("hospital_department is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andHospitalDepartmentIsNotNull() {
-            addCriterion("hospital_department is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andHospitalDepartmentEqualTo(String value) {
-            addCriterion("hospital_department =", value, "hospitalDepartment");
-            return (Criteria) this;
-        }
-
-        public Criteria andHospitalDepartmentNotEqualTo(String value) {
-            addCriterion("hospital_department <>", value, "hospitalDepartment");
-            return (Criteria) this;
-        }
-
-        public Criteria andHospitalDepartmentGreaterThan(String value) {
-            addCriterion("hospital_department >", value, "hospitalDepartment");
-            return (Criteria) this;
-        }
-
-        public Criteria andHospitalDepartmentGreaterThanOrEqualTo(String value) {
-            addCriterion("hospital_department >=", value, "hospitalDepartment");
-            return (Criteria) this;
-        }
-
-        public Criteria andHospitalDepartmentLessThan(String value) {
-            addCriterion("hospital_department <", value, "hospitalDepartment");
-            return (Criteria) this;
-        }
-
-        public Criteria andHospitalDepartmentLessThanOrEqualTo(String value) {
-            addCriterion("hospital_department <=", value, "hospitalDepartment");
-            return (Criteria) this;
-        }
-
-        public Criteria andHospitalDepartmentLike(String value) {
-            addCriterion("hospital_department like", value, "hospitalDepartment");
-            return (Criteria) this;
-        }
-
-        public Criteria andHospitalDepartmentNotLike(String value) {
-            addCriterion("hospital_department not like", value, "hospitalDepartment");
-            return (Criteria) this;
-        }
-
-        public Criteria andHospitalDepartmentIn(List<String> values) {
-            addCriterion("hospital_department in", values, "hospitalDepartment");
-            return (Criteria) this;
-        }
-
-        public Criteria andHospitalDepartmentNotIn(List<String> values) {
-            addCriterion("hospital_department not in", values, "hospitalDepartment");
-            return (Criteria) this;
-        }
-
-        public Criteria andHospitalDepartmentBetween(String value1, String value2) {
-            addCriterion("hospital_department between", value1, value2, "hospitalDepartment");
-            return (Criteria) this;
-        }
-
-        public Criteria andHospitalDepartmentNotBetween(String value1, String value2) {
-            addCriterion("hospital_department not between", value1, value2, "hospitalDepartment");
             return (Criteria) this;
         }
     }

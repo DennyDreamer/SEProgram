@@ -254,6 +254,206 @@ public class prescriptionExample {
             return (Criteria) this;
         }
 
+        public Criteria andPrescriptionHospitalIsNull() {
+            addCriterion("prescription_hospital is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionHospitalIsNotNull() {
+            addCriterion("prescription_hospital is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionHospitalEqualTo(String value) {
+            addCriterion("prescription_hospital =", value, "prescriptionHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionHospitalNotEqualTo(String value) {
+            addCriterion("prescription_hospital <>", value, "prescriptionHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionHospitalGreaterThan(String value) {
+            addCriterion("prescription_hospital >", value, "prescriptionHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionHospitalGreaterThanOrEqualTo(String value) {
+            addCriterion("prescription_hospital >=", value, "prescriptionHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionHospitalLessThan(String value) {
+            addCriterion("prescription_hospital <", value, "prescriptionHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionHospitalLessThanOrEqualTo(String value) {
+            addCriterion("prescription_hospital <=", value, "prescriptionHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionHospitalLike(String value) {
+            addCriterion("prescription_hospital like", value, "prescriptionHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionHospitalNotLike(String value) {
+            addCriterion("prescription_hospital not like", value, "prescriptionHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionHospitalIn(List<String> values) {
+            addCriterion("prescription_hospital in", values, "prescriptionHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionHospitalNotIn(List<String> values) {
+            addCriterion("prescription_hospital not in", values, "prescriptionHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionHospitalBetween(String value1, String value2) {
+            addCriterion("prescription_hospital between", value1, value2, "prescriptionHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionHospitalNotBetween(String value1, String value2) {
+            addCriterion("prescription_hospital not between", value1, value2, "prescriptionHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionDepartmentIsNull() {
+            addCriterion("prescription_department is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionDepartmentIsNotNull() {
+            addCriterion("prescription_department is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionDepartmentEqualTo(String value) {
+            addCriterion("prescription_department =", value, "prescriptionDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionDepartmentNotEqualTo(String value) {
+            addCriterion("prescription_department <>", value, "prescriptionDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionDepartmentGreaterThan(String value) {
+            addCriterion("prescription_department >", value, "prescriptionDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionDepartmentGreaterThanOrEqualTo(String value) {
+            addCriterion("prescription_department >=", value, "prescriptionDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionDepartmentLessThan(String value) {
+            addCriterion("prescription_department <", value, "prescriptionDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionDepartmentLessThanOrEqualTo(String value) {
+            addCriterion("prescription_department <=", value, "prescriptionDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionDepartmentLike(String value) {
+            addCriterion("prescription_department like", value, "prescriptionDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionDepartmentNotLike(String value) {
+            addCriterion("prescription_department not like", value, "prescriptionDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionDepartmentIn(List<String> values) {
+            addCriterion("prescription_department in", values, "prescriptionDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionDepartmentNotIn(List<String> values) {
+            addCriterion("prescription_department not in", values, "prescriptionDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionDepartmentBetween(String value1, String value2) {
+            addCriterion("prescription_department between", value1, value2, "prescriptionDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionDepartmentNotBetween(String value1, String value2) {
+            addCriterion("prescription_department not between", value1, value2, "prescriptionDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionCostIsNull() {
+            addCriterion("prescription_cost is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionCostIsNotNull() {
+            addCriterion("prescription_cost is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionCostEqualTo(Integer value) {
+            addCriterion("prescription_cost =", value, "prescriptionCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionCostNotEqualTo(Integer value) {
+            addCriterion("prescription_cost <>", value, "prescriptionCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionCostGreaterThan(Integer value) {
+            addCriterion("prescription_cost >", value, "prescriptionCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionCostGreaterThanOrEqualTo(Integer value) {
+            addCriterion("prescription_cost >=", value, "prescriptionCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionCostLessThan(Integer value) {
+            addCriterion("prescription_cost <", value, "prescriptionCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionCostLessThanOrEqualTo(Integer value) {
+            addCriterion("prescription_cost <=", value, "prescriptionCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionCostIn(List<Integer> values) {
+            addCriterion("prescription_cost in", values, "prescriptionCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionCostNotIn(List<Integer> values) {
+            addCriterion("prescription_cost not in", values, "prescriptionCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionCostBetween(Integer value1, Integer value2) {
+            addCriterion("prescription_cost between", value1, value2, "prescriptionCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrescriptionCostNotBetween(Integer value1, Integer value2) {
+            addCriterion("prescription_cost not between", value1, value2, "prescriptionCost");
+            return (Criteria) this;
+        }
+
         public Criteria andPrescriptionImageIsNull() {
             addCriterion("prescription_image is null");
             return (Criteria) this;

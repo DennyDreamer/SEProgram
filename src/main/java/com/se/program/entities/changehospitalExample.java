@@ -324,6 +324,146 @@ public class changehospitalExample {
             return (Criteria) this;
         }
 
+        public Criteria andChangehospitalInIsNull() {
+            addCriterion("changehospital_in is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalInIsNotNull() {
+            addCriterion("changehospital_in is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalInEqualTo(String value) {
+            addCriterion("changehospital_in =", value, "changehospitalIn");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalInNotEqualTo(String value) {
+            addCriterion("changehospital_in <>", value, "changehospitalIn");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalInGreaterThan(String value) {
+            addCriterion("changehospital_in >", value, "changehospitalIn");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalInGreaterThanOrEqualTo(String value) {
+            addCriterion("changehospital_in >=", value, "changehospitalIn");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalInLessThan(String value) {
+            addCriterion("changehospital_in <", value, "changehospitalIn");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalInLessThanOrEqualTo(String value) {
+            addCriterion("changehospital_in <=", value, "changehospitalIn");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalInLike(String value) {
+            addCriterion("changehospital_in like", value, "changehospitalIn");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalInNotLike(String value) {
+            addCriterion("changehospital_in not like", value, "changehospitalIn");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalInIn(List<String> values) {
+            addCriterion("changehospital_in in", values, "changehospitalIn");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalInNotIn(List<String> values) {
+            addCriterion("changehospital_in not in", values, "changehospitalIn");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalInBetween(String value1, String value2) {
+            addCriterion("changehospital_in between", value1, value2, "changehospitalIn");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalInNotBetween(String value1, String value2) {
+            addCriterion("changehospital_in not between", value1, value2, "changehospitalIn");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalOutIsNull() {
+            addCriterion("changehospital_out is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalOutIsNotNull() {
+            addCriterion("changehospital_out is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalOutEqualTo(String value) {
+            addCriterion("changehospital_out =", value, "changehospitalOut");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalOutNotEqualTo(String value) {
+            addCriterion("changehospital_out <>", value, "changehospitalOut");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalOutGreaterThan(String value) {
+            addCriterion("changehospital_out >", value, "changehospitalOut");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalOutGreaterThanOrEqualTo(String value) {
+            addCriterion("changehospital_out >=", value, "changehospitalOut");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalOutLessThan(String value) {
+            addCriterion("changehospital_out <", value, "changehospitalOut");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalOutLessThanOrEqualTo(String value) {
+            addCriterion("changehospital_out <=", value, "changehospitalOut");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalOutLike(String value) {
+            addCriterion("changehospital_out like", value, "changehospitalOut");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalOutNotLike(String value) {
+            addCriterion("changehospital_out not like", value, "changehospitalOut");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalOutIn(List<String> values) {
+            addCriterion("changehospital_out in", values, "changehospitalOut");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalOutNotIn(List<String> values) {
+            addCriterion("changehospital_out not in", values, "changehospitalOut");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalOutBetween(String value1, String value2) {
+            addCriterion("changehospital_out between", value1, value2, "changehospitalOut");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalOutNotBetween(String value1, String value2) {
+            addCriterion("changehospital_out not between", value1, value2, "changehospitalOut");
+            return (Criteria) this;
+        }
+
         public Criteria andFormIdIsNull() {
             addCriterion("form_id is null");
             return (Criteria) this;

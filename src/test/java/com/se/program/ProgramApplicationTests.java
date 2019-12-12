@@ -30,21 +30,20 @@ class ProgramApplicationTests {
 
     @Test
     void contextLoads() {
-        List<zhuanzhenModel> recordArr;
-     //   System.out.println(UserMapper.selectPasswordByPrimaryKey(1));
-        List<record> a = RecordMapper.selectByUserId(1);
+//        List<zhuanzhenModel> recordArr;
+//     //   System.out.println(UserMapper.selectPasswordByPrimaryKey(1));
+//        List<record> a = RecordMapper.selectByUserId(1);
+//
+//        System.out.println(BillMapper.selectMaxCount());
+//        System.out.println(RecordMapper.selectMaxCount());
+//        System.out.println(FormMapper.selectMaxCount());
+//        System.out.println(RegisterMapper.selectMaxCount());
+//        System.out.println(PrescriptionMapper.selectMaxCount());
+//       System.out.println(ChangehospitalMapper.selectMaxCount());
+//        for(int i =0;i<a.size();i++) {
+//
+//        System.out.println(a.get(i).getRecordId());
 
-        System.out.println(BillMapper.selectMaxCount());
-        System.out.println(RecordMapper.selectMaxCount());
-        System.out.println(FormMapper.selectMaxCount());
-        System.out.println(RegisterMapper.selectMaxCount());
-        System.out.println(PrescriptionMapper.selectMaxCount());
-       System.out.println(ChangehospitalMapper.selectMaxCount());
-        for(int i =0;i<a.size();i++) {
-
-        System.out.println(a.get(i).getRecordId());
-
-        }
       //  System.out.println(RecordMapper.selectByUserId(1));
       //  System.out.println(UserMapper.selectIdByUserNumber("456888"));
     }

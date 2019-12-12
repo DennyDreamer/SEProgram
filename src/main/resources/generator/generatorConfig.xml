@@ -22,6 +22,7 @@
         <javaModelGenerator targetPackage="com.se.program.entities" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
+
         </javaModelGenerator>
         <!-- 生成XML映射文件的包名和位置-->
         <sqlMapGenerator targetPackage="main.resources.mybatis.mapper" targetProject="src">

@@ -37,7 +37,7 @@ public class LoginController {
         String password = LoginUser.getPassword();
         int admin_id = Integer.parseInt(number);
 
-        int id = UserMapper.selectIdByUserNumber(number);
+        int id = 1;
 
         //   System.out.println(UserMapper.selectByPrimaryKey(1).getPassword());
 
