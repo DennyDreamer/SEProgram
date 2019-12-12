@@ -254,6 +254,206 @@ public class registerExample {
             return (Criteria) this;
         }
 
+        public Criteria andRegisterHospitalIsNull() {
+            addCriterion("register_hospital is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterHospitalIsNotNull() {
+            addCriterion("register_hospital is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterHospitalEqualTo(String value) {
+            addCriterion("register_hospital =", value, "registerHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterHospitalNotEqualTo(String value) {
+            addCriterion("register_hospital <>", value, "registerHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterHospitalGreaterThan(String value) {
+            addCriterion("register_hospital >", value, "registerHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterHospitalGreaterThanOrEqualTo(String value) {
+            addCriterion("register_hospital >=", value, "registerHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterHospitalLessThan(String value) {
+            addCriterion("register_hospital <", value, "registerHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterHospitalLessThanOrEqualTo(String value) {
+            addCriterion("register_hospital <=", value, "registerHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterHospitalLike(String value) {
+            addCriterion("register_hospital like", value, "registerHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterHospitalNotLike(String value) {
+            addCriterion("register_hospital not like", value, "registerHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterHospitalIn(List<String> values) {
+            addCriterion("register_hospital in", values, "registerHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterHospitalNotIn(List<String> values) {
+            addCriterion("register_hospital not in", values, "registerHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterHospitalBetween(String value1, String value2) {
+            addCriterion("register_hospital between", value1, value2, "registerHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterHospitalNotBetween(String value1, String value2) {
+            addCriterion("register_hospital not between", value1, value2, "registerHospital");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterDepartmentIsNull() {
+            addCriterion("register_department is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterDepartmentIsNotNull() {
+            addCriterion("register_department is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterDepartmentEqualTo(String value) {
+            addCriterion("register_department =", value, "registerDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterDepartmentNotEqualTo(String value) {
+            addCriterion("register_department <>", value, "registerDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterDepartmentGreaterThan(String value) {
+            addCriterion("register_department >", value, "registerDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterDepartmentGreaterThanOrEqualTo(String value) {
+            addCriterion("register_department >=", value, "registerDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterDepartmentLessThan(String value) {
+            addCriterion("register_department <", value, "registerDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterDepartmentLessThanOrEqualTo(String value) {
+            addCriterion("register_department <=", value, "registerDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterDepartmentLike(String value) {
+            addCriterion("register_department like", value, "registerDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterDepartmentNotLike(String value) {
+            addCriterion("register_department not like", value, "registerDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterDepartmentIn(List<String> values) {
+            addCriterion("register_department in", values, "registerDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterDepartmentNotIn(List<String> values) {
+            addCriterion("register_department not in", values, "registerDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterDepartmentBetween(String value1, String value2) {
+            addCriterion("register_department between", value1, value2, "registerDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterDepartmentNotBetween(String value1, String value2) {
+            addCriterion("register_department not between", value1, value2, "registerDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterCostIsNull() {
+            addCriterion("register_cost is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterCostIsNotNull() {
+            addCriterion("register_cost is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterCostEqualTo(Integer value) {
+            addCriterion("register_cost =", value, "registerCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterCostNotEqualTo(Integer value) {
+            addCriterion("register_cost <>", value, "registerCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterCostGreaterThan(Integer value) {
+            addCriterion("register_cost >", value, "registerCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterCostGreaterThanOrEqualTo(Integer value) {
+            addCriterion("register_cost >=", value, "registerCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterCostLessThan(Integer value) {
+            addCriterion("register_cost <", value, "registerCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterCostLessThanOrEqualTo(Integer value) {
+            addCriterion("register_cost <=", value, "registerCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterCostIn(List<Integer> values) {
+            addCriterion("register_cost in", values, "registerCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterCostNotIn(List<Integer> values) {
+            addCriterion("register_cost not in", values, "registerCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterCostBetween(Integer value1, Integer value2) {
+            addCriterion("register_cost between", value1, value2, "registerCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterCostNotBetween(Integer value1, Integer value2) {
+            addCriterion("register_cost not between", value1, value2, "registerCost");
+            return (Criteria) this;
+        }
+
         public Criteria andRegisterImageIsNull() {
             addCriterion("register_image is null");
             return (Criteria) this;
@@ -324,6 +524,76 @@ public class registerExample {
             return (Criteria) this;
         }
 
+        public Criteria andRegisterExplainationIsNull() {
+            addCriterion("register_explaination is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterExplainationIsNotNull() {
+            addCriterion("register_explaination is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterExplainationEqualTo(String value) {
+            addCriterion("register_explaination =", value, "registerExplaination");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterExplainationNotEqualTo(String value) {
+            addCriterion("register_explaination <>", value, "registerExplaination");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterExplainationGreaterThan(String value) {
+            addCriterion("register_explaination >", value, "registerExplaination");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterExplainationGreaterThanOrEqualTo(String value) {
+            addCriterion("register_explaination >=", value, "registerExplaination");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterExplainationLessThan(String value) {
+            addCriterion("register_explaination <", value, "registerExplaination");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterExplainationLessThanOrEqualTo(String value) {
+            addCriterion("register_explaination <=", value, "registerExplaination");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterExplainationLike(String value) {
+            addCriterion("register_explaination like", value, "registerExplaination");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterExplainationNotLike(String value) {
+            addCriterion("register_explaination not like", value, "registerExplaination");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterExplainationIn(List<String> values) {
+            addCriterion("register_explaination in", values, "registerExplaination");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterExplainationNotIn(List<String> values) {
+            addCriterion("register_explaination not in", values, "registerExplaination");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterExplainationBetween(String value1, String value2) {
+            addCriterion("register_explaination between", value1, value2, "registerExplaination");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterExplainationNotBetween(String value1, String value2) {
+            addCriterion("register_explaination not between", value1, value2, "registerExplaination");
+            return (Criteria) this;
+        }
+
         public Criteria andFormIdIsNull() {
             addCriterion("form_id is null");
             return (Criteria) this;
@@ -381,6 +651,66 @@ public class registerExample {
 
         public Criteria andFormIdNotBetween(Integer value1, Integer value2) {
             addCriterion("form_id not between", value1, value2, "formId");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalIdIsNull() {
+            addCriterion("changehospital_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalIdIsNotNull() {
+            addCriterion("changehospital_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalIdEqualTo(Integer value) {
+            addCriterion("changehospital_id =", value, "changehospitalId");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalIdNotEqualTo(Integer value) {
+            addCriterion("changehospital_id <>", value, "changehospitalId");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalIdGreaterThan(Integer value) {
+            addCriterion("changehospital_id >", value, "changehospitalId");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("changehospital_id >=", value, "changehospitalId");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalIdLessThan(Integer value) {
+            addCriterion("changehospital_id <", value, "changehospitalId");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalIdLessThanOrEqualTo(Integer value) {
+            addCriterion("changehospital_id <=", value, "changehospitalId");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalIdIn(List<Integer> values) {
+            addCriterion("changehospital_id in", values, "changehospitalId");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalIdNotIn(List<Integer> values) {
+            addCriterion("changehospital_id not in", values, "changehospitalId");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalIdBetween(Integer value1, Integer value2) {
+            addCriterion("changehospital_id between", value1, value2, "changehospitalId");
+            return (Criteria) this;
+        }
+
+        public Criteria andChangehospitalIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("changehospital_id not between", value1, value2, "changehospitalId");
             return (Criteria) this;
         }
     }

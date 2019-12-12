@@ -20,11 +20,11 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin` (
-  `admin_id` int(30) NOT NULL auto_increment,
-  `admin_name` varchar(30) NOT NULL,
-  `admin_permission` int(30) NOT NULL,
-  `admin_password` varchar(30) NOT NULL,
-  PRIMARY KEY (`admin_id`)
+                         `admin_id` int(30) NOT NULL auto_increment,
+                         `admin_name` varchar(30) NOT NULL,
+                         `admin_permission` int(30) NOT NULL,
+                         `admin_password` varchar(30) NOT NULL,
+                         PRIMARY KEY (`admin_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -36,13 +36,15 @@ CREATE TABLE `admin` (
 -- ----------------------------
 DROP TABLE IF EXISTS `bill`;
 CREATE TABLE `bill` (
-  `bill_id` int(30) NOT NULL auto_increment,
-  `bill_cost` int(30) NOT NULL,
-  `bill_prescription_image` varchar(100) NOT NULL,
-  `bill_image` varchar(100) NOT NULL,
-  `form_id` int(5) NOT NULL,
-  PRIMARY KEY (`bill_id`),
-  KEY `form_id` (`form_id`)
+                        `bill_id` int(30) NOT NULL auto_increment,
+                        `bill_cost` int(30) NOT NULL,
+                        `bill_prescription_image` varchar(100) NOT NULL,
+                        `bill_image` varchar(100) NOT NULL,
+                        `form_id` int(30) NOT NULL,
+                        `register_id` int(30) NOT NULL,
+                        PRIMARY KEY (`bill_id`),
+                        KEY `form_id` (`form_id`),
+                        KEY `register_id` (`register_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -54,13 +56,13 @@ CREATE TABLE `bill` (
 -- ----------------------------
 DROP TABLE IF EXISTS `changehospital`;
 CREATE TABLE `changehospital` (
-  `changehospital_id` int(30) NOT NULL auto_increment,
-  `changehospital_image` varchar(30) ,
-  `changehospital_in` varchar(30) ,
-  `changehospital_out` varchar(30) ,
-  `form_id` int(30) NOT NULL,
-  PRIMARY KEY (`changehospital_id`),
-  KEY `form_id` (`form_id`)
+                                  `changehospital_id` int(30) NOT NULL auto_increment,
+                                  `changehospital_image` varchar(30) ,
+                                  `changehospital_in` varchar(30) ,
+                                  `changehospital_out` varchar(30) ,
+                                  `form_id` int(30) NOT NULL,
+                                  PRIMARY KEY (`changehospital_id`),
+                                  KEY `form_id` (`form_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -72,11 +74,11 @@ CREATE TABLE `changehospital` (
 -- ----------------------------
 DROP TABLE IF EXISTS `department`;
 CREATE TABLE `department` (
-  `department_id` int(30) NOT NULL auto_increment,
-  `department_oldname` varchar(30) NOT NULL,
-  `department_name` varchar(30) DEFAULT NULL,
-  `department_state` varchar(30) DEFAULT NULL,
-  PRIMARY KEY (`department_id`)
+                              `department_id` int(30) NOT NULL auto_increment,
+                              `department_oldname` varchar(30) NOT NULL,
+                              `department_name` varchar(30) DEFAULT NULL,
+                              `department_state` varchar(30) DEFAULT NULL,
+                              PRIMARY KEY (`department_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -88,13 +90,13 @@ CREATE TABLE `department` (
 -- ----------------------------
 DROP TABLE IF EXISTS `form`;
 CREATE TABLE `form` (
-  `form_id` int(30) NOT NULL AUTO_INCREMENT,
-  `form_time` datetime ,
-  `form_kind` int(30) ,
-  `gaizhang_img` varchar(30) ,
-  `teshu_img` varchar(30) ,
-  `form_text` varchar(1000) ,
-  PRIMARY KEY (`form_id`)
+                        `form_id` int(30) NOT NULL AUTO_INCREMENT,
+                        `form_time` datetime ,
+                        `form_kind` int(30) ,
+                        `gaizhang_img` varchar(30) ,
+                        `teshu_img` varchar(30) ,
+                        `form_text` varchar(1000) ,
+                        PRIMARY KEY (`form_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -106,18 +108,18 @@ CREATE TABLE `form` (
 -- ----------------------------
 DROP TABLE IF EXISTS `operation`;
 CREATE TABLE `operation` (
-  `operation_id` int(30) NOT NULL auto_increment,
-  `form_id` int(30) NOT NULL,
-  `register_zifei` int(30) NOT NULL,
-  `bill_zifei` int(30) NOT NULL,
-  `operation_time` datetime NOT NULL,
-  `amount` varchar(30) NOT NULL,
-  `admin_id` int(30) NOT NULL,
-  `operation_kind` int(30) NOT NULL,
-  `operation_text` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`operation_id`),
-  KEY `admin_id` (`admin_id`),
-  KEY `form_id` (`form_id`)
+                             `operation_id` int(30) NOT NULL auto_increment,
+                             `form_id` int(30) NOT NULL,
+                             `register_zifei` int(30) NOT NULL,
+                             `bill_zifei` int(30) NOT NULL,
+                             `operation_time` datetime NOT NULL,
+                             `amount` varchar(30) NOT NULL,
+                             `admin_id` int(30) NOT NULL,
+                             `operation_kind` int(30) NOT NULL,
+                             `operation_text` varchar(100) DEFAULT NULL,
+                             PRIMARY KEY (`operation_id`),
+                             KEY `admin_id` (`admin_id`),
+                             KEY `form_id` (`form_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -148,14 +150,14 @@ CREATE TABLE `operation` (
 -- ----------------------------
 DROP TABLE IF EXISTS `record`;
 CREATE TABLE `record` (
-  `record_id` int(11) NOT NULL auto_increment,
-  `user_id` int(11) not null ,
-  `record_time` datetime not null ,
-  `form_id` int(11) NOT NULL,
-  `record_state` int(11) NOT NULL,
-  PRIMARY KEY (`record_id`),
-  KEY `user_id` (`user_id`),
-  KEY `form_id` (`form_id`)
+                          `record_id` int(11) NOT NULL auto_increment,
+                          `user_id` int(11) not null ,
+                          `record_time` datetime not null ,
+                          `form_id` int(11) NOT NULL,
+                          `record_state` int(11) NOT NULL,
+                          PRIMARY KEY (`record_id`),
+                          KEY `user_id` (`user_id`),
+                          KEY `form_id` (`form_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -167,15 +169,17 @@ CREATE TABLE `record` (
 -- ----------------------------
 DROP TABLE IF EXISTS `register`;
 CREATE TABLE `register` (
-  `register_id` int(30) NOT NULL auto_increment,
-  `register_hospital` varchar(30) not null ,
-  `register_department` varchar(30) NOT NULL,
-  `register_cost` int(30) NOT NULL,
-  `register_image` varchar(30) NOT NULL,
-  `register_explaination` varchar(30) NOT NULL,
-  `form_id` int(30) NOT NULL,
-  PRIMARY KEY (`register_id`),
-  KEY `form_id` (`form_id`)
+                            `register_id` int(30) NOT NULL auto_increment,
+                            `register_hospital` varchar(30) not null ,
+                            `register_department` varchar(30) NOT NULL,
+                            `register_cost` int(30) NOT NULL,
+                            `register_image` varchar(30) NOT NULL,
+                            `register_explaination` varchar(30) NOT NULL,
+                            `form_id` int(30) NOT NULL,
+                            `changehospital_id` int(30) NOT NULL,
+                            PRIMARY KEY (`register_id`),
+                            KEY `form_id` (`form_id`),
+                            KEY `changehospital_id` (`changehospital_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -187,19 +191,19 @@ CREATE TABLE `register` (
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `user_id` int(30) NOT NULL auto_increment,
-  `user_name` varchar(30) DEFAULT NULL,
-  `user_sex` varchar(30) DEFAULT NULL,
-  `user_idcard` varchar(30) DEFAULT NULL,
-  `user_nation` varchar(30) DEFAULT NULL,
-  `user_phone` varchar(30) DEFAULT NULL,
-  `user_number` varchar(30) DEFAULT NULL,
-  `user_password` varchar(30) DEFAULT NULL,
-  `user_type` int(30) DEFAULT NULL,
-  `user_state` int(30) DEFAULT NULL,
-  `department_id` int(30) DEFAULT NULL,
-  PRIMARY KEY (`user_id`),
-  KEY `department_id` (`department_id`)
+                        `user_id` int(30) NOT NULL auto_increment,
+                        `user_name` varchar(30) DEFAULT NULL,
+                        `user_sex` varchar(30) DEFAULT NULL,
+                        `user_idcard` varchar(30) DEFAULT NULL,
+                        `user_nation` varchar(30) DEFAULT NULL,
+                        `user_phone` varchar(30) DEFAULT NULL,
+                        `user_number` varchar(30) DEFAULT NULL,
+                        `user_password` varchar(30) DEFAULT NULL,
+                        `user_type` int(30) DEFAULT NULL,
+                        `user_state` int(30) DEFAULT NULL,
+                        `department_id` int(30) DEFAULT NULL,
+                        PRIMARY KEY (`user_id`),
+                        KEY `department_id` (`department_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------

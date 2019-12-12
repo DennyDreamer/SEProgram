@@ -1,10 +1,10 @@
 package com.se.program.mapper;
 
 import com.se.program.entities.admin;
-import org.springframework.stereotype.Repository;
 import com.se.program.entities.adminExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 @Repository
 public interface adminMapper {

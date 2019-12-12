@@ -254,6 +254,136 @@ public class billExample {
             return (Criteria) this;
         }
 
+        public Criteria andBillCostIsNull() {
+            addCriterion("bill_cost is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillCostIsNotNull() {
+            addCriterion("bill_cost is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillCostEqualTo(Integer value) {
+            addCriterion("bill_cost =", value, "billCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillCostNotEqualTo(Integer value) {
+            addCriterion("bill_cost <>", value, "billCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillCostGreaterThan(Integer value) {
+            addCriterion("bill_cost >", value, "billCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillCostGreaterThanOrEqualTo(Integer value) {
+            addCriterion("bill_cost >=", value, "billCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillCostLessThan(Integer value) {
+            addCriterion("bill_cost <", value, "billCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillCostLessThanOrEqualTo(Integer value) {
+            addCriterion("bill_cost <=", value, "billCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillCostIn(List<Integer> values) {
+            addCriterion("bill_cost in", values, "billCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillCostNotIn(List<Integer> values) {
+            addCriterion("bill_cost not in", values, "billCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillCostBetween(Integer value1, Integer value2) {
+            addCriterion("bill_cost between", value1, value2, "billCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillCostNotBetween(Integer value1, Integer value2) {
+            addCriterion("bill_cost not between", value1, value2, "billCost");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillPrescriptionImageIsNull() {
+            addCriterion("bill_prescription_image is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillPrescriptionImageIsNotNull() {
+            addCriterion("bill_prescription_image is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillPrescriptionImageEqualTo(String value) {
+            addCriterion("bill_prescription_image =", value, "billPrescriptionImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillPrescriptionImageNotEqualTo(String value) {
+            addCriterion("bill_prescription_image <>", value, "billPrescriptionImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillPrescriptionImageGreaterThan(String value) {
+            addCriterion("bill_prescription_image >", value, "billPrescriptionImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillPrescriptionImageGreaterThanOrEqualTo(String value) {
+            addCriterion("bill_prescription_image >=", value, "billPrescriptionImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillPrescriptionImageLessThan(String value) {
+            addCriterion("bill_prescription_image <", value, "billPrescriptionImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillPrescriptionImageLessThanOrEqualTo(String value) {
+            addCriterion("bill_prescription_image <=", value, "billPrescriptionImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillPrescriptionImageLike(String value) {
+            addCriterion("bill_prescription_image like", value, "billPrescriptionImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillPrescriptionImageNotLike(String value) {
+            addCriterion("bill_prescription_image not like", value, "billPrescriptionImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillPrescriptionImageIn(List<String> values) {
+            addCriterion("bill_prescription_image in", values, "billPrescriptionImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillPrescriptionImageNotIn(List<String> values) {
+            addCriterion("bill_prescription_image not in", values, "billPrescriptionImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillPrescriptionImageBetween(String value1, String value2) {
+            addCriterion("bill_prescription_image between", value1, value2, "billPrescriptionImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillPrescriptionImageNotBetween(String value1, String value2) {
+            addCriterion("bill_prescription_image not between", value1, value2, "billPrescriptionImage");
+            return (Criteria) this;
+        }
+
         public Criteria andBillImageIsNull() {
             addCriterion("bill_image is null");
             return (Criteria) this;
@@ -381,6 +511,66 @@ public class billExample {
 
         public Criteria andFormIdNotBetween(Integer value1, Integer value2) {
             addCriterion("form_id not between", value1, value2, "formId");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterIdIsNull() {
+            addCriterion("register_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterIdIsNotNull() {
+            addCriterion("register_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterIdEqualTo(Integer value) {
+            addCriterion("register_id =", value, "registerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterIdNotEqualTo(Integer value) {
+            addCriterion("register_id <>", value, "registerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterIdGreaterThan(Integer value) {
+            addCriterion("register_id >", value, "registerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("register_id >=", value, "registerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterIdLessThan(Integer value) {
+            addCriterion("register_id <", value, "registerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterIdLessThanOrEqualTo(Integer value) {
+            addCriterion("register_id <=", value, "registerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterIdIn(List<Integer> values) {
+            addCriterion("register_id in", values, "registerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterIdNotIn(List<Integer> values) {
+            addCriterion("register_id not in", values, "registerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterIdBetween(Integer value1, Integer value2) {
+            addCriterion("register_id between", value1, value2, "registerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("register_id not between", value1, value2, "registerId");
             return (Criteria) this;
         }
     }

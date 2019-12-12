@@ -315,6 +315,126 @@ public class operationExample {
             return (Criteria) this;
         }
 
+        public Criteria andRegisterZifeiIsNull() {
+            addCriterion("register_zifei is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterZifeiIsNotNull() {
+            addCriterion("register_zifei is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterZifeiEqualTo(Integer value) {
+            addCriterion("register_zifei =", value, "registerZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterZifeiNotEqualTo(Integer value) {
+            addCriterion("register_zifei <>", value, "registerZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterZifeiGreaterThan(Integer value) {
+            addCriterion("register_zifei >", value, "registerZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterZifeiGreaterThanOrEqualTo(Integer value) {
+            addCriterion("register_zifei >=", value, "registerZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterZifeiLessThan(Integer value) {
+            addCriterion("register_zifei <", value, "registerZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterZifeiLessThanOrEqualTo(Integer value) {
+            addCriterion("register_zifei <=", value, "registerZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterZifeiIn(List<Integer> values) {
+            addCriterion("register_zifei in", values, "registerZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterZifeiNotIn(List<Integer> values) {
+            addCriterion("register_zifei not in", values, "registerZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterZifeiBetween(Integer value1, Integer value2) {
+            addCriterion("register_zifei between", value1, value2, "registerZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegisterZifeiNotBetween(Integer value1, Integer value2) {
+            addCriterion("register_zifei not between", value1, value2, "registerZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillZifeiIsNull() {
+            addCriterion("bill_zifei is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillZifeiIsNotNull() {
+            addCriterion("bill_zifei is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillZifeiEqualTo(Integer value) {
+            addCriterion("bill_zifei =", value, "billZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillZifeiNotEqualTo(Integer value) {
+            addCriterion("bill_zifei <>", value, "billZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillZifeiGreaterThan(Integer value) {
+            addCriterion("bill_zifei >", value, "billZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillZifeiGreaterThanOrEqualTo(Integer value) {
+            addCriterion("bill_zifei >=", value, "billZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillZifeiLessThan(Integer value) {
+            addCriterion("bill_zifei <", value, "billZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillZifeiLessThanOrEqualTo(Integer value) {
+            addCriterion("bill_zifei <=", value, "billZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillZifeiIn(List<Integer> values) {
+            addCriterion("bill_zifei in", values, "billZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillZifeiNotIn(List<Integer> values) {
+            addCriterion("bill_zifei not in", values, "billZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillZifeiBetween(Integer value1, Integer value2) {
+            addCriterion("bill_zifei between", value1, value2, "billZifei");
+            return (Criteria) this;
+        }
+
+        public Criteria andBillZifeiNotBetween(Integer value1, Integer value2) {
+            addCriterion("bill_zifei not between", value1, value2, "billZifei");
+            return (Criteria) this;
+        }
+
         public Criteria andOperationTimeIsNull() {
             addCriterion("operation_time is null");
             return (Criteria) this;

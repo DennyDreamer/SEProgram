@@ -1,7 +1,12 @@
 package com.se.program;
 
 import com.se.program.entities.record;
+import com.se.program.entities.recordExample;
+import com.se.program.entities.user;
+import com.se.program.entities.userExample;
 import com.se.program.mapper.*;
+import org.hibernate.Criteria;
+import org.hibernate.criterion.Example;
 import org.junit.jupiter.api.Test;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,46 +22,59 @@ class ProgramApplicationTests {
     userMapper UserMapper;
     @Autowired
     recordMapper RecordMapper;
-    @Autowired
-    billMapper BillMapper;
-    @Autowired
-    changehospitalMapper ChangehospitalMapper;
-    @Autowired
-    formMapper FormMapper;
-    @Autowired
-    prescriptionMapper PrescriptionMapper;
-    @Autowired
-    registerMapper RegisterMapper;
+//    @Autowired
+//    billMapper BillMapper;
+//    @Autowired
+//    changehospitalMapper ChangehospitalMapper;
+//    @Autowired
+//    formMapper FormMapper;
+//    @Autowired
+//    prescriptionMapper PrescriptionMapper;
+//    @Autowired
+//    registerMapper RegisterMapper;
 
     @Test
     void contextLoads() {
-        List<zhuanzhenModel> recordArr;
+//        List<zhuanzhenModel> recordArr;
 
-        List<Integer> TheseFormId = RecordMapper.selectFormIdByRecordId(3);
-        for(int j =0;j<TheseFormId.size();j++){
-            System.out.println(TheseFormId.get(j).intValue());
-        }
+//
+//        userExample example = new userExample();
+//
+//        userExample.Criteria criteria = new userExample().createCriteria();
+//
+//        criteria.andUserNumberEqualTo("11");
+//
+//        List<user> TheseUser = UserMapper.selectByExample(example);
+//
+//
 
-        List<Integer> TheseBillid = BillMapper.selectBillIdByFormId(3);
+   //     System.out.println(UserMapper.selectIdByUserNumber("1120151870"));
 
-        for(int i=0;i<TheseBillid.size();i++){
-            System.out.println(TheseBillid.get(i).intValue());
-        }
-
-        List<Integer> TheseChangeId= ChangehospitalMapper.selectChangeIdByFormId(3);
-        for(int i=0;i<TheseChangeId.size();i++){
-            System.out.println(TheseChangeId.get(i).intValue());
-        }
-
-        List<Integer> ThesePreId= PrescriptionMapper.selectPreIdByFormId(3);
-        for(int i=0;i<ThesePreId.size();i++){
-            System.out.println(ThesePreId.get(i).intValue());
-        }
-
-        List<Integer> TheseRegId= RegisterMapper.selectRegIdByFormId(3);
-        for(int i=0;i<TheseRegId.size();i++){
-            System.out.println(TheseRegId.get(i).intValue());
-        }
+//        List<Integer> TheseFormId = RecordMapper.selectFormIdByRecordId(3);
+//        for(int j =0;j<TheseFormId.size();j++){
+//            System.out.println(TheseFormId.get(j).intValue());
+//        }
+//
+//        List<Integer> TheseBillid = BillMapper.selectBillIdByFormId(3);
+//
+//        for(int i=0;i<TheseBillid.size();i++){
+//            System.out.println(TheseBillid.get(i).intValue());
+//        }
+//
+//        List<Integer> TheseChangeId= ChangehospitalMapper.selectChangeIdByFormId(3);
+//        for(int i=0;i<TheseChangeId.size();i++){
+//            System.out.println(TheseChangeId.get(i).intValue());
+//        }
+//
+//        List<Integer> ThesePreId= PrescriptionMapper.selectPreIdByFormId(3);
+//        for(int i=0;i<ThesePreId.size();i++){
+//            System.out.println(ThesePreId.get(i).intValue());
+//        }
+//
+//        List<Integer> TheseRegId= RegisterMapper.selectRegIdByFormId(3);
+//        for(int i=0;i<TheseRegId.size();i++){
+//            System.out.println(TheseRegId.get(i).intValue());
+//        }
      //   System.out.println(UserMapper.selectPasswordByPrimaryKey(1));
 //        List<record> a = RecordMapper.selectByUserId(1);
 //
